@@ -58,4 +58,24 @@ def set_flag_send(event):
 
 ## 실행화면
 
-
+### 서버 GUI
+<img width="" height="" src="./image/서버 처음.png"></img>
+### 서버 실행
+<img width="" height="" src="./image/서버 실행.png"></img>
+### 클라이언트 GUI
+<img width="" height="" src="./image/클라이언트 처음.png"></img>
+### 클라이언트 접속
+<img width="" height="" src="./image/클라이언트 접속.png"></img>
+### 클라이언트 닉네임 중복 접속
+<img width="" height="" src="./image/클라이언트 중복 접속.png"></img>
+<img width="" height="" src="./image/서버 아이디 중복.png"></img>
+### 채팅
+<img width="" height="" src="./image/채팅.PNG"></img>
+<img width="" height="" src="./image/서버 채팅 로그.png"></img>
+### 강퇴
+<img width="" height="" src="./image/서버 강퇴1.png"></img>
+<img width="" height="" src="./image/서버 강퇴2.png"></img>
+<img width="" height="" src="./image/클라이언트 추방.PNG"></img>
+### 접속 종료
+<img width="" height="" src="./image/클라이언트 종료.PNG"></img>
+<img width="" height="" src="./image/서버 클라이언트 종료.png"></img>
