@@ -41,6 +41,11 @@ def recv(sock):
                 raise NameError('중복')
             elif (data[0:6] == '[kick]'):
                 raise ConnectionAbortedError('강퇴')
+            elif (data[0:8] == '[시스템 추방]'):
+                sock.send(('').encode())
+                chat_log['state'] = 'normal'
+                chat_log.insert("end", data+'\n')
+                chat_log['state'] = 'disabled'
             else:
                 chat_log['state'] = 'normal'
                 chat_log.insert("end",str(data+'\n'))
