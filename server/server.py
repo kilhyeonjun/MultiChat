@@ -14,6 +14,8 @@ def s_thread(c_sock, addr):
     while True:
         try:
             data = c_sock.recv(1024)
+            if(data==''):
+                continue
             data=str(data.decode()).split('|')
             if data[0] == 'id,':
                 for c in c_sockNameList:
@@ -56,7 +58,6 @@ def s_thread(c_sock, addr):
             chat_log['state'] = 'disabled'
             break
         except NameError as e:
-
             c_sockList.remove(c_sock)
             print('중복')
             c_sock.sendall(('[아이디 중복]').encode())
@@ -121,13 +122,13 @@ def kick():
         c_sockNameList.remove(name)
         chater_list_del()
         for c in c_sockList:
-            c.sendall(('[시스템] ' + name + ' 님이 나갔습니다.').encode())
+            c.sendall(('[시스템 추방] ' + name + ' 님이 추방되었습니다.').encode())
             msg = '[접속인원]'
             for Name in c_sockNameList:
                 msg = msg + Name + '|'
             c.sendall(msg.encode())
         chat_log['state'] = 'normal'
-        chat_log.insert("end", '접속 종료 '+name + '\n')
+        chat_log.insert("end", '추방 '+name + '\n')
         chat_log['state'] = 'disabled'
         chater_list_del()
         for Name in c_sockNameList:
